@@ -1,0 +1,45 @@
+{
+  "name": "react-rollup-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "A baseline to develop react apps and components with TypeScript and Rollup",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run lint && NODE_ENV=production rollup -c",
+    "watch": "rollup -cw",
+    "lint": "tslint --project tsconfig.json --type-check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andregoncalves/react-rollup-typescript-boilerplate.git"
+  },
+  "author": {
+    "name": "Andre Goncalves",
+    "email": "andre@andregoncalves.com",
+    "url": "https://andregoncalves.com"
+  },
+  "bugs": {
+    "url": "https://github.com/andregoncalves/react-rollup-typescript-boilerplate"
+  },
+  "homepage": "https://github.com/andregoncalves/react-rollup-typescript-boilerplate",
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "react": "16",
+    "react-dom": "16",
+    "rollup": "latest",
+    "rollup-plugin-commonjs": "latest",
+    "rollup-plugin-livereload": "latest",
+    "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-replace": "latest",
+    "rollup-plugin-serve": "latest",
+    "rollup-plugin-typescript2": "latest",
+    "rollup-plugin-uglify": "latest",
+    "rollup-watch": "latest",
+    "tslib": "latest",
+    "tslint": "latest",
+    "typescript": "latest",
+    "typings": "latest"
+  }
+}
