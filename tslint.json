@@ -65,7 +65,7 @@
         "one-variable-per-declaration": true,
         "quotemark": [true, "single", "jsx-double"],
         "semicolon": [true, "always"],
-        "space-before-function-paren": [true, { "anonymous": "never", "named": "never", "asyncArrow": "always", "method": "always", "constructor": "always" }],
+        "space-before-function-paren": [true, { "anonymous": "never", "named": "never", "asyncArrow": "always", "method": "never", "constructor": "never" }],
         "variable-name": [true, "check-format", "allow-pascal-case", "allow-leading-underscore", "ban-keywords"],
         "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-module", "check-separator", "check-type", "check-typecast"]
     }

@@ -6,6 +6,8 @@ import replace from 'rollup-plugin-replace';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 import uglify from 'rollup-plugin-uglify';
+import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
 
 const dev = 'development';
 const prod = 'production';
@@ -36,6 +38,12 @@ const plugins = [
             ]
         },
     }),
+    postcss({
+      extract: true,  // extracts to `${basename(dest)}.css`
+      plugins: [autoprefixer],
+      writeDefinitions: true,
+      // postcssModulesOptions: { ... }
+    }),
     typescript()
     /*
     typescriptPlugin({
@@ -53,14 +61,13 @@ const plugins = [
 if (nodeEnv === dev) {
     // For playing around with just frontend code the serve plugin is pretty nice.
     // We removed it when we started doing actual backend work.
-    /*plugins.push(serve({
+    plugins.push(serve({
         port: 3000,
-        historyApiFallback: false,
         verbose: true,
-        contentBase: './src'
-    }));*/
-    plugins.push(serve('.'));
-    plugins.push(livereload());
+        contentBase: '.'
+    }));
+    //plugins.push(serve('.'));
+    plugins.push(livereload({watch: 'dist'}));
 }
 
 if (nodeEnv === prod) {
