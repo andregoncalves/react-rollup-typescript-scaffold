@@ -9,9 +9,13 @@
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "target": "es5",
-    "declaration": true
+    "declaration": true,
+    "sourceMap": true,
   },
   "include": [
     "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

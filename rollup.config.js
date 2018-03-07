@@ -78,7 +78,7 @@ export default {
     plugins,
     input: './src/index.tsx',
     output: {
-      sourcemap: nodeEnv === dev ? 'inline' : false,
+      sourcemap: nodeEnv === dev ? true : false,
       file: './dist/index.js',
       format: 'iife'
     }
